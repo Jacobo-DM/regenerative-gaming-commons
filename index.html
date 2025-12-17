@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regenerative Gaming Commons</title>
+
+  <style>
+    :root {
+      --bg: #050505;
+      --card: #0c0c0c;
+      --text: #f5f5f5;
+      --muted: #c0c0c0;
+      --border: #333;
+      --radius: 16px;
+      --max: 920px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    header, main, footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px;
+    }
+
+    header h1 {
+      margin: 0 0 6px 0;
+      font-size: 1.9rem;
+      font-weight: 600;
+    }
+
+    header p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    nav {
+      margin-top: 18px;
+    }
+
+    nav a {
+      margin-right: 14px;
+      text-decoration: none;
+      color: var(--text);
+      opacity: 0.85;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 22px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 6px;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .tags {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .media img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      margin-bottom: 12px;
+    }
+
+    .storyhook {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Regenerative Gaming Commons</h1>
+    <p>
+      Games that restore attention rather than extract it.
+      Parasympathetic, small-being-safe, and grounded in listening.
+    </p>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="games/">Games</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- LILY PAD GAME -->
+    <section class="card">
+      <h2>The Lily Pad Game</h2>
+      <div class="tags">whole-body listening · audio field · calm movement</div>
+
+      <figure class="media">
+        <img
+          src="assets/lily-pad-game.png"
+          alt="Commons Card: The Lily Pad Game"
+          loading="lazy"
+        />
+      </figure>
+
+      <p>
+        A regenerative audio field designed to restore proprioceptive calm
+        through whole-body listening. Originally a learning game, it has evolved
+        into a tool for comfort — suitable for children, animals, and anyone in
+        need of sensory grounding.
+      </p>
+
+      <p class="storyhook">
+        “The pond remembers every footfall. If you listen, it teaches you how to land.”
+      </p>
+    </section>
+
+    <!-- PLACEHOLDER FOR NEXT GAMES -->
+    <section class="card">
+      <h2>Breath Games (forthcoming)</h2>
+      <div class="tags">breath · play · household materials</div>
+
+      <p>
+        Gentle breath-based games using cotton balls and repurposed asthma
+        medication dispenser tubes. Designed to invite soft focus, playful
+        precision, and shared regulation rather than performance.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    Regenerative Gaming Commons · CC / Open Commons ·
+    <span>Designed to return energy, not borrow it.</span>
+  </footer>
+
+</body>
+</html>
