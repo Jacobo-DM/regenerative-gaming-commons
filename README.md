@@ -1,35 +1,66 @@
-# Regenerative Gaming Commons
+# 🌱 Regenerative Gaming
 
-Regenerative Gaming is a commons-based approach to game design focused on restoration rather than extraction.
+This is not a system to learn.
 
-These games are designed to:
-- Restore attention instead of fragmenting it
-- Engage the whole body, not just the eyes and thumbs
-- Cultivate care, attunement, and reciprocity
-- Leave players, places, and relationships more whole than before
+It is a place to notice.
 
-This is not gamification.
-This is not engagement engineering.
-This is play as a regenerative act.
+---
 
-## What Lives Here
+You may find:
 
-- Games that train listening, presence, and embodied intelligence
-- Designs suitable for children, adults, animals, classrooms, and healing spaces
-- Systems that measure quality of attention rather than success or failure
+- movement  
+- sound  
+- silence  
+- other people  
+- yourself  
 
-## Lineage
+None of these need to be understood.
 
-This commons emerged from the Flower Road ecosystem, Discovery Mode, and long-form experiments in somatic learning, storytelling, and ecological listening.
+---
 
-It is offered openly, with care.
+There is no goal.
 
-## Stewardship Note
+Nothing to complete.
 
-You are free to use, remix, and adapt these works.
-If you build upon them, please preserve their regenerative intent.
-Do not turn them into tools of extraction, surveillance, or coercion.
+Nothing to improve.
 
-Games shape behavior.
-Design accordingly. 
+---
 
+You may enter through:
+
+- a gesture  
+- a question  
+- a moment of attention  
+- or by doing nothing at all  
+
+---
+
+If you are looking for instructions, pause.
+
+If you are willing to notice, continue.
+
+---
+
+Some paths you might encounter:
+
+- Whale Song  
+- Circles in Motion  
+- Lily Pad Crossing  
+- Night Carousel  
+
+You do not need to choose.
+
+---
+
+If something feels unclear, stay with that.
+
+Clarity is not required here.
+
+---
+
+For those holding or stewarding this space, see the Covenant.
+
+---
+
+*We are not here to become better players—  
+we are here to remember how to feel the game we are already in.*
