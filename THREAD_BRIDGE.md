@@ -1,5 +1,6 @@
 > This is not a method. If used as one, it will stop working.
-Regenerative Gaming — Thread Summary (Transfer Note)
+
+# 🌱 Regenerative Gaming — Thread Summary (Transfer Note)
 
 ## 🜂 Core Insight
 
@@ -70,7 +71,7 @@ Critical protections:
 
 ---
 
-## The Pause
+## ⏳ The Pause
 
 > **The pause is part of the experience, not a gap**
 
@@ -82,7 +83,7 @@ Facilitator does nothing:
 
 ---
 
-## Expression Layer (WeatherWheel)
+## 🌦 Expression Layer (WeatherWheel)
 
 Responses may be:
 
@@ -102,7 +103,7 @@ Important:
 
 ---
 
-## Key Safeguards (critical)
+## 🛑 Key Safeguards (critical)
 
 ### No Fixing
 
@@ -167,7 +168,7 @@ This informs:
 
 ---
 
-## Core Principle
+## 🌱 Core Principle
 
 > **Exploration without demand**
 
@@ -181,7 +182,7 @@ Nothing must be completed.
 
 ---
 
-## Key Design Insight
+## 🌼 Key Design Insight
 
 Children integrate through:
 
@@ -213,11 +214,9 @@ Design for:
 
 ---
 
-## Current Status
+## 🧭 Current Status
 
 * System has **broken its shell**
 * Multiple playable prototypes identified
 * Safeguards established (critical for integrity)
 * Ready for repo + early field testing
-
--
