@@ -33,7 +33,7 @@
 
     .shell {
       width: 100%;
-      max-width: 700px;
+      max-width: 720px;
       padding: 40px 24px 48px;
       text-align: center;
       border: 1px solid var(--line);
@@ -48,12 +48,12 @@
       letter-spacing: 0.02em;
     }
 
-    .soft {
-      color: var(--soft);
+    p {
+      margin: 0.9rem 0;
     }
 
-    .spacer {
-      height: 28px;
+    .soft {
+      color: var(--soft);
     }
 
     .rule {
@@ -63,19 +63,21 @@
       margin: 28px auto;
     }
 
-    audio {
-      width: 100%;
-      max-width: 460px;
-      margin: 18px auto 8px;
-      display: block;
-      filter: saturate(0.85) brightness(0.95);
+    .note {
+      font-size: 0.96rem;
+      color: var(--soft);
+      max-width: 36rem;
+      margin: 0.8rem auto 0;
     }
 
-    .note {
-      font-size: 0.95rem;
-      color: var(--soft);
+    .sources {
+      margin: 1.2rem auto 0;
       max-width: 34rem;
-      margin: 10px auto 0;
+      color: var(--soft);
+    }
+
+    .sources p {
+      margin: 0.45rem 0;
     }
 
     .return {
@@ -97,16 +99,23 @@
 <body>
   <main class="shell">
     <h1>🐋 Whale Song</h1>
-    <p class="soft">Begin with sound.</p>
 
-    <audio controls preload="none">
-      <source src="assets/audio/whale-song.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
+    <p class="soft">Begin with a sound.</p>
 
-    <p class="note">
-      If there is no sound yet, the song has not been placed in the commons.
+    <div class="rule"></div>
+
+    <p>This sound does not live here.</p>
+
+    <p class="soft">
+      It may come from a teacher, a trusted recording, the place you are in,
+      your own voice, or someone near you.
     </p>
+
+    <div class="sources">
+      <p>If using recordings, choose living sound over performance.</p>
+      <p>Seek unaltered field recordings when possible.</p>
+      <p>Avoid tracks layered with music, effects, or mood-making.</p>
+    </div>
 
     <div class="rule"></div>
 
@@ -114,7 +123,7 @@
     <p class="soft">Make a sound, if you like.</p>
     <p class="soft">Or don’t.</p>
 
-    <div class="spacer"></div>
+    <div class="rule"></div>
 
     <p>There is no right sound.</p>
     <p>There is no wrong silence.</p>
