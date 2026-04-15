@@ -4,104 +4,347 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Regenerative Gaming Commons</title>
+  <meta name="description" content="A commons for play as a regenerative act. Games that restore attention rather than extract it. Stewarded openly under CC BY-NC-SA 4.0." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
 
   <style>
+    :root {
+      --bg:           #090c08;
+      --bg-lift:      #111510;
+      --bg-card:      #0f1310;
+      --border:       #252c22;
+      --border-soft:  #1d231a;
+      --text:         #e2dfd4;
+      --muted:        #949b8c;
+      --faint:        #606858;
+      --accent:       #6aaa7e;
+      --accent-dim:   #3d6649;
+      --link:         #a9c5b3;
+      --link-hover:   #d8e7de;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { font-size: 18px; scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      background: #050505;
-      color: #f5f5f5;
-      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Lora', Georgia, 'Times New Roman', serif;
+      line-height: 1.8;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -10%, #162014 0%, transparent 65%);
+      min-height: 100vh;
     }
 
-    .wrap {
-      max-width: 920px;
+    .page {
+      max-width: 680px;
       margin: 0 auto;
-      padding: 28px 18px;
+      padding: 4.5rem 1.5rem 2rem;
     }
 
-    h1 { margin-top: 0; }
+    .threshold-mark {
+      display: block;
+      font-size: 1.3rem;
+      margin-bottom: 1.75rem;
+      opacity: 0.45;
+      letter-spacing: 0.15em;
+      user-select: none;
+    }
+
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 6vw, 3rem);
+      line-height: 1.12;
+      letter-spacing: -0.015em;
+      margin: 0 0 0.5rem;
+      color: var(--text);
+    }
+
+    h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin: 3.25rem 0 1rem;
+    }
+
+    p {
+      margin: 0 0 1.1rem;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .tagline {
+      font-style: italic;
+      font-size: 1.08rem;
+      color: var(--muted);
+      margin: 0 0 2.5rem;
+      max-width: 32rem;
+    }
+
+    .rule {
+      border: none;
+      border-top: 1px solid var(--border-soft);
+      margin: 2.75rem 0;
+    }
+
+    .stewardship {
+      margin: 0 0 2.75rem;
+      padding: 1.15rem 1.3rem 1.15rem 1.1rem;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent-dim);
+      background: var(--bg-card);
+      font-size: 0.92rem;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .stewardship strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .stewardship a {
+      color: var(--link);
+      font-size: inherit;
+    }
+
+    .stewardship .license-line {
+      display: block;
+      margin-top: 0.6rem;
+      padding-top: 0.6rem;
+      border-top: 1px solid var(--border-soft);
+      font-size: 0.83rem;
+      letter-spacing: 0.02em;
+    }
+
+    .is-not {
+      margin: 1.25rem 0 1.5rem;
+      padding-left: 1.1rem;
+      border-left: 2px solid var(--border);
+      color: var(--muted);
+      font-style: italic;
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    .invitations {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin: 1rem 0 0;
+    }
+
+    .invitation {
+      display: block;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 1.1rem 1.3rem;
+      background: var(--bg-card);
+      transition: border-color 0.25s, background 0.25s;
+      border-bottom-width: 2px;
+      border-bottom-color: var(--border);
+    }
+
+    .invitation:hover {
+      border-color: var(--accent-dim);
+      border-bottom-color: var(--accent);
+      background: var(--bg-lift);
+    }
+
+    .invitation-title {
+      display: block;
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 400;
+      font-size: 1.15rem;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+      line-height: 1.3;
+    }
+
+    .invitation-desc {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .secondary-nav {
+      margin: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      font-size: 0.95rem;
+    }
 
     a {
-      color: #f5f5f5;
-      text-decoration: underline;
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent-dim);
+      transition: color 0.2s, border-color 0.2s;
     }
 
-    .card {
-      background: #0c0c0c;
-      border: 1px solid #333;
-      border-radius: 16px;
-      padding: 20px;
-      margin: 20px 0;
+    a:hover {
+      color: var(--link-hover);
+      border-color: var(--accent);
     }
 
-    .muted {
-      color: #c0c0c0;
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    footer {
+      margin-top: 5rem;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .footer-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .footer-inner p {
+      font-size: 0.84rem;
+      color: var(--faint);
+      line-height: 1.68;
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-inner a {
+      color: var(--faint);
+      border-bottom-color: var(--border);
+      font-size: inherit;
+    }
+
+    .footer-inner a:hover {
+      color: var(--link-hover);
+      border-color: var(--accent-dim);
+    }
+
+    .cc-mark {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-dim);
+      border: 1px solid var(--accent-dim);
+      padding: 0.15em 0.5em;
+      margin-bottom: 1rem;
+      font-family: 'Fraunces', Georgia, serif;
+    }
+
+    @media (max-width: 500px) {
+      .page { padding: 3rem 1.25rem 1.5rem; }
+      h1 { font-size: 1.9rem; }
+      .footer-inner { padding: 2rem 1.25rem 3rem; }
     }
   </style>
 </head>
-
 <body>
-  <div class="wrap">
-    <h1>Regenerative Gaming Commons</h1>
+  <div class="page">
+    <span class="threshold-mark" aria-hidden="true">∿ ∿ ∿</span>
 
-    <p class="muted">
-      Games that restore attention rather than extract it.
-      Calming, small-being-safe, and grounded in listening.
+    <h1>Regenerative<br />Gaming Commons</h1>
+    <p class="tagline">Games that restore attention rather than extract it.</p>
+
+    <div class="stewardship" role="note" aria-label="Stewardship and licensing">
+      <strong>Stewarded by Jacobo Hernández Durbin.</strong>
+      This commons is shared freely under
+      <a href="LICENSE.md">CC BY-NC-SA 4.0</a> —
+      you may share and adapt this work for noncommercial purposes,
+      with attribution and under the same license.
+      <br /><br />
+      This work is not offered for commercial repackaging, behavioral extraction,
+      or institutional capture under the language of care.
+      The legal license governs reuse.
+      The <a href="covenant/">covenant of this commons</a> helps protect the spirit of the work.
+      If you are unsure whether your use honors both, read the covenant first.
+      <span class="license-line">
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener">
+          creativecommons.org/licenses/by-nc-sa/4.0
+        </a>
+      </span>
+    </div>
+
+    <hr class="rule" />
+
+    <p>
+      This is a commons for play as a regenerative act —
+      for attention without coercion,
+      for small-being-safe design,
+      for games that return us to ourselves rather than pulling us away.
+    </p>
+    <p>
+      You will find practices, games, and principles here.
+      None of them require you to achieve anything.
     </p>
 
-    <div class="card">
-      <h2>What lives here</h2>
-      <p>
-        This commons holds games, practices, and design principles
-        rooted in attention, care, and embodied presence.
-      </p>
-      <p>
-        <a href="README.md">Read the Commons Overview →</a>
-      </p>
-    </div>
-<div style="text-align:center; margin-top: 60px;">
-  <a href="whale-song.html" style="
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #e8eef7;
-    border-bottom: 1px solid #e8eef7;
-    padding-bottom: 4px;
-  ">
-    🐋 Whale Song
-  </a>
-</div>
-    <div class="card">
-      <h2>The Games</h2>
-      <p>
-        The Lily Pad Game and other regenerative games live here.
-      </p>
-      <p>
-        <a href="games/">Enter the Games →</a>
-      </p>
+    <div class="is-not" role="note" aria-label="What this is not">
+      This is not gamification.
+      Not behavioral extraction dressed as care.
+      Not a productivity system.
+      Not a product.
     </div>
 
-    <div class="card">
-      <h2>Principles of Regenerative Game Design</h2>
-      <p>
-        The ethical and somatic foundations that guide this work.
-      </p>
-      <p>
-      <a href="principles/">
-          Read the Principles →
-        </a>
-      </p>
+    <p>
+      It is offered for sharing, tending, and careful adaptation —
+      not for capture, flattening, or easy monetization.
+    </p>
+
+    <hr class="rule" />
+
+    <h2>Enter</h2>
+    <div class="invitations">
+      <a href="whale-song.html" class="invitation">
+        <span class="invitation-title">🐋&ensp;Whale Song</span>
+        <span class="invitation-desc">A listening practice. Come with sound, or with silence.</span>
+      </a>
+      <a href="games/" class="invitation">
+        <span class="invitation-title">🪷&ensp;Enter the Games</span>
+        <span class="invitation-desc">Embodied games to play alone or together. No instruction required to begin.</span>
+      </a>
     </div>
 
-<p class="muted">
-  This is not gamification.
-  This is play as a regenerative act.
-</p>
-
-<p>
-  <a href="covenant/">Read the Covenant →</a>
-</p>
-    
+    <h2>Go deeper</h2>
+    <div class="secondary-nav">
+      <a href="principles/">Principles of Regenerative Game Design&ensp;→</a>
+      <a href="covenant/">The Covenant&ensp;→</a>
+      <a href="LICENSE.md">License&ensp;→</a>
+    </div>
   </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="cc-mark">CC BY-NC-SA 4.0</span>
+      <p>
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license noopener" target="_blank">
+          Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International
+        </a>.
+        Share and adapt freely for noncommercial purposes,
+        with attribution, and under the same license.
+        Modifications must be clearly noted.
+      </p>
+      <p>
+        Stewarded by <a href="https://github.com/Jacobo-DM/regenerative-gaming-commons">Jacobo Hernández Durbin</a>.
+        Not affiliated with or endorsed by any commercial platform.
+        This work is shared in the spirit of regenerative practice, careful attention,
+        embodied safety, and non-extractive relation.
+      </p>
+      <p>
+        For questions about use or adaptation, read the
+        <a href="covenant/">covenant</a> and
+        <a href="LICENSE.md">license</a> together.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
